@@ -1,0 +1,521 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 24px;
+  overflow-x: hidden;
+  background-color: #f3f0f0;
+}
+.btn-success {
+  background-color: #21b573;
+  transition: 0.3s ease;
+}
+.btn-success:hover {
+  background-color: #fd511a;
+  border: 1px solid #fd511a;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  margin: 0rem;
+}
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.btn,
+.btn:hover {
+  outline: none;
+}
+.btn:focus {
+  box-shadow: none;
+}
+.btn {
+  display: inline-block;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+.sectionTitle {
+  text-align: center;
+}
+.sectionTitle h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  color: #413960;
+}
+
+.headerSection {
+  background-color: #f0fff0;
+  width: 100%;
+}
+
+.headerSection .container {
+  padding: 0 12px !important;
+}
+.headerSection .navbar > .container-fluid {
+  padding: 0 !important;
+}
+.navbar-light {
+}
+.headerSection .bg-light {
+  background-color: transparent !important;
+}
+.navlinkColor.scrolled {
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.navbar-brand {
+}
+.headerSection .navbar-nav .nav-item .nav-link {
+  color: #000;
+  font-size: 16px;
+  padding: 8px 0 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  transition: all 0.5s ease;
+
+  border-bottom: 1px solid transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fd511a;
+  border-bottom: 1px solid #fd511a;
+}
+.headerSection .navbar-nav .btn-success:hover {
+  background-color: #fd511a;
+  border: 1px solid #fd511a;
+}
+.headerSection .btn-success {
+  color: #fff;
+  background-color: #21b573;
+
+  border-radius: 40px;
+  padding: 8px 35px;
+  border: 1px solid transparent;
+  font-weight: 400;
+  margin: 0 0 0 25px;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 991px) {
+  .headerSection .btn-success {
+    display: none;
+  }
+}
+.bgColor.scrolled {
+  background-color: #f0fff0 !important;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+.navlinkColor.scrolled {
+  color: #000 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+/* এই পার্টটুকু তে টোগল আইকনটাকে নাই করে দেওয়া হয়েছে 
+সাথে একটা লাইন দেওয়া হয়েছে যেটা কাস্টম টোগল মেনু হিসেবে 
+থাকবে, এর background transparent করা হয়েছে যাতে টোগল 
+অবস্থাতে না দেখা যায়। এবং এর before after ক্রস হিসেবে কাজ করে।
+
+ */
+
+.navbar-toggler .navbar-toggler-icon {
+  position: relative;
+  background: black;
+  background-image: none !important;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  vertical-align: middle;
+  transition: 0.01s ease-in-out;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  position: absolute;
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  right: 0px;
+  transition: 0.13s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  position: absolute;
+  content: "";
+  background: #000;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  bottom: -10px;
+  transition: 0.3s ease-in-out;
+  transform: rotate(0deg);
+}
+
+/* collapsed */
+/* .navbar-toggler.collapsed .navbar-toggler-icon::before {
+  top: -10px;
+  transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+  bottom: -10px;
+  transform: rotate(0deg);
+}
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  background: #000;
+} */
+
+/* টোগল আইকনের আউটলাইন নান করে দেওয়া হইছে যাতে ফোকাস এক্টিভ বা 
+ সাধারন সময়েও আউট লাইন দেখা না যায়*/
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.bannerSection {
+  background-color: #f0fff0;
+  padding-top: 35px;
+  padding-bottom: 65px;
+}
+.bannerSection .bannerImage {
+}
+.bannerSection .bannerImage img {
+}
+.bannerSection .bannerText {
+}
+.bannerSection .bannerText .hlt-paragraph {
+  color: #fd511a;
+  font-weight: 400;
+}
+.bannerSection .bannerText p {
+  color: #000;
+  font-weight: 500;
+  line-height: 36px;
+}
+.bannerSection .bannerTitle {
+  margin: 10px 0 20px;
+}
+.bannerSection .bannerTitle h1 {
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.bannerTitle span {
+  color: #21b573;
+}
+.bannerText .btn-success {
+  padding: 12px 36px;
+  margin-top: 15px;
+  line-height: 19px;
+  border-radius: 32px;
+}
+
+@media (max-width: 991.99px) and (min-width: 768px) {
+  .bannerSection .bannerTitle h1 {
+    font-size: 39px;
+    line-height: 45px;
+  }
+  .bannerTitle span {
+    font-size: 40px;
+  }
+  .bannerSection .bannerText p {
+    line-height: 28px;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .bannerSection {
+    text-align: center;
+  }
+  .bannerSection .bannerTitle {
+    margin: 5px 0 10px;
+  }
+  .bannerSection .bannerTitle h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .bannerSection .bannerText p {
+    line-height: 24px;
+  }
+  .bannerSection .bannerText {
+    margin: 30px 0 00px !important;
+  }
+}
+@media (max-width: 575.99px) {
+  .bannerSection {
+    text-align: center;
+  }
+  .bannerSection .bannerTitle {
+    margin: 5px 0 10px;
+  }
+  .bannerSection .bannerTitle h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .bannerSection .bannerText p {
+    line-height: 24px;
+  }
+  .bannerSection .bannerText {
+    margin: 30px 0 00px !important;
+  }
+}
+
+.infoCardSection {
+  padding: 25px 0 50px;
+}
+.infoCardSection .col-lg-3,
+.infoCardSection .col-md-6 {
+}
+
+.infoCardSection .infoCard {
+  margin-top: 25px;
+  text-align: center;
+  background-color: #f0fff0;
+  padding: 55px 0 50px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.infoCardSection .infoCard:hover {
+  background-color: #fff;
+  box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.53);
+}
+
+.infoCardSection .infoCard .icon {
+  margin-bottom: 20px;
+}
+.infoCardSection .infoCard .icon img {
+}
+.infoCardSection .infoCard .cardText {
+}
+.infoCardSection .infoCard .cardText h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #413960;
+}
+.infoCardSection .infoCard .cardText h4 {
+  color: #585859;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.courseSection {
+  margin: 50px 0;
+}
+
+.courseSection .courseCard {
+  background-color: #ffffff;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  padding: 24px 20px 30px;
+  margin-top: 60px;
+}
+.courseSection .courseCard .cardImage {
+}
+.courseCard .cardImage img {
+}
+.courseCard .cardText {
+}
+.courseCard .cardText h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #413960;
+  margin-top: 20px;
+  margin-bottom: 0 !important;
+}
+.courseCard .cardText p {
+  margin: 3px 0 20px;
+}
+.courseCard .cardText a {
+  line-height: 19px;
+  color: #fff;
+}
+.courseCard .cardText .btn-success {
+  padding: 8px 28px;
+  line-height: 19px;
+  border-radius: 32px;
+}
+.courseCard .cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+}
+.courseCard .cardFooter .calender {
+}
+.courseCard .cardFooter .calender .list-inline {
+}
+
+.courseCard .cardFooter .calender .list-inline .list-inline-item {
+}
+
+.courseCard .cardFooter .calender .list-inline .list-inline-item img {
+}
+
+.courseCard .cardFooter .calender .list-inline .list-inline-item span {
+  font-weight: 500;
+  line-height: 24px;
+}
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .courseSection .courseCard {
+    padding: 15px 10px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .courseSection .courseCard {
+    padding: 15px 10px 20px;
+  }
+}
+
+.testimonialSection {
+  padding-top: 30px;
+}
+.testimonialSection .sectionTitle h1 {
+  color: #000;
+}
+.testimonialSection .image {
+  text-align: center;
+}
+.testimonialSection .image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.testimonialSection .text {
+}
+.testimonialSection .text p {
+  padding: 0;
+  line-height: 30px;
+}
+.testimonialPart {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .testimonialPart {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .testimonialSection .text p {
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+.footerPart1 {
+  background-color: #282531;
+  margin: 30px 0 0;
+}
+.footerText {
+}
+.footerText p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.paddingTop {
+  padding-top: 55px;
+}
+.paddingbottom {
+  padding-bottom: 40px;
+}
+.footerPart1 .widget {
+}
+.footerPart1 .widget h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  margin: 0;
+}
+.footerPart1 .widget ul {
+}
+.footerPart1 .widget ul li {
+}
+.footerPart1 .widget ul li a {
+  font-weight: 300;
+
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media (max-width: 991.98px) and (min-width: 576px) {
+  .footerText p {
+    text-align: center;
+  }
+  .footerPart1 .widget {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .footerText p {
+    text-align: center;
+  }
+  .footerPart1 .widget {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+.footer {
+  padding: 25px 0;
+  background-color: #282531;
+}
+.footer .copyright {
+  text-align: center;
+}
+.footer .copyright p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #cdcdcd;
+}
